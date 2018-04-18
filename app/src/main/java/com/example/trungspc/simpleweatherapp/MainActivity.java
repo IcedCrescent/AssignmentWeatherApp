@@ -78,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
         weather.getWeather(cityID, "metric", "vi", "1a51acf5bdfba80ac910961e2435f68a").enqueue(new Callback<WeatherResponse>() {
             @Override
             public void onResponse(Call<WeatherResponse> call, Response<WeatherResponse> response) {
-                Log.d(TAG, "onResponse: " + (response.body() == null));
-//                String result = response.body().getList().toString();
-//                tvWeather.setText(result);
+
+                String result = response.body().toString();
+                tvWeather.setText(result);
             }
 
             @Override

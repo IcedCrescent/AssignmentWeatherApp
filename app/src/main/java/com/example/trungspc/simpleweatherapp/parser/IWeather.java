@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface IWeather {
-    @GET("/forecast")
+    @GET("forecast")
     Call<WeatherResponse> getWeather(
         @Query("id") int id,
         @Query("units") String unit,
